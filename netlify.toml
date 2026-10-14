@@ -1,0 +1,14 @@
+# netlify.toml
+[build]
+  # Le dice a Netlify que construya desde la carpeta 'frontend'
+  base = "frontend"
+  # El comando para construir tu app
+  command = "npm run build"
+  # La carpeta donde Vite deja el resultado
+  publish = "dist"
+
+[[redirects]]
+  # Redirige todas las rutas que no sean archivos estáticos a index.html
+  from = "/*"
+  to = "/index.html"
+  status = 200
